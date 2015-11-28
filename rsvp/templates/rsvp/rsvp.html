@@ -2,7 +2,6 @@
 <form method="POST" action="/RSVP/">
     {% csrf_token %}
     {{ rsvp_form }}
-    {{ user }}
     <input type="submit" value="RSVP" />
 </form>
 {% endblock %}
