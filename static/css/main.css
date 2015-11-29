@@ -45,32 +45,27 @@ h1 {
   text-align: center;
 }
 
+.fullscreen-wrap {
+  display: table;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 0;
+}
+
+.inner-wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .intro {
-    display: table;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url('../img/faceoff_shortened.png') no-repeat top center scroll;
+    background: url(../img/faceoff_shortened.jpg) no-repeat top center scroll;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
 }
 
 .img-center {
@@ -90,6 +85,14 @@ h1 {
   border: 7px solid rgba(255,0,84,1);
 }
 
+.text-right-responsive {
+  text-align: center;
+}
+
+.text-left-responsive {
+  text-align: center;
+}
+
 .lead-him {
   color: #5bc0de;
   font-size: 16px;
@@ -102,6 +105,7 @@ h1 {
 
 .content-section {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .gift-section {
@@ -110,10 +114,11 @@ h1 {
 }
 
 .about-section {
-    width: 100%;
-    padding: 50px 0;
+    /*width: 100%;
+    height: 100vh;
+    padding: 50px 0;*/
     color: #fff;
-    background: url(../img/stonewall-crop-xs.jpg) no-repeat center bottom scroll;
+    background: url(../img/stonewall-crop-xs.jpg) no-repeat center top fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -121,7 +126,7 @@ h1 {
     -o-background-size: cover;
 }
 
-.about-section h1 {
+.about-section h1, .ceremony-section h1, .gift-section h1 {
   color: #fff;
 }
 
@@ -129,7 +134,19 @@ h1 {
     width: 100%;
     padding: 50px 0;
     color: #5bc0de;
-    background: url(../img/tree-kiss-crop-xs.jpg) no-repeat center bottom scroll;
+    background: url(../img/petcat-crop-xs.jpg) no-repeat center bottom fixed;
+    background-color: #FFF;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.gift-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/porch-dark-xs.jpg) no-repeat center center fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -141,7 +158,7 @@ h1 {
     .intro {
         width: 100%;
         padding: 0;
-        background: url('../img/faceoff.jpg') no-repeat top center scroll;
+        background: url(../img/faceoff.jpg) no-repeat top center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -157,10 +174,10 @@ h1 {
     }
 
     .about-section {
-        width: 100%;
-        padding: 50px 0;
+      /*  width: 100%;
+        padding: 50px 0;*/
         color: #fff;
-        background: url(../img/stonewall-crop.jpg) no-repeat left center scroll;
+        background: url(../img/stonewall-dark.jpg) no-repeat left top fixed;
         background-color: #FFF;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -168,27 +185,45 @@ h1 {
         -o-background-size: cover;
     }
 
+    .text-right-responsive {
+      text-align: right;
+    }
+
+    .text-left-responsive {
+      text-align: left;
+    }
+
     .ceremony-section {
         width: 100%;
         padding: 50px 0;
-        color: #5bc0de;
-        background: url(../img/_DSC2780.jpg) no-repeat left center fixed;
+        color: #fff;
+        background: url(../img/petcat-dark.jpg) no-repeat left center fixed;
         background-color: #FFF;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
     }
+    .gift-section {
+        background: url(../img/porch-dark.jpg) no-repeat right center fixed;
 }
 
 @media(min-width:1200px) {
     .intro {
         width: 100%;
         padding: 0;
-        background: url('../img/faceoff_extended.png') no-repeat top center scroll;
+        background: url(../img/faceoff_extended.jpg) no-repeat top center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
+    }
+
+    .text-right-responsive {
+      text-align: right;
+    }
+
+    .text-left-responsive {
+      text-align: left;
     }
 }
