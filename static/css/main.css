@@ -78,6 +78,11 @@ h1 {
   border: 7px solid white;
 }
 
+.party-div {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .party-img-him {
   border: 7px solid #5bc0de;
 }
