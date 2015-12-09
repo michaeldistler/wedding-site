@@ -1,9 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 
 class Rsvp(models.Model):
-    user = models.OneToOneField(User)
+    first_name = models.CharField(null=True, max_length=100)
+    last_name = models.CharField(null=True, max_length=100)
+    email = models.EmailField(null=True)
+    number_of_guests = models.IntegerField(null=True, blank=True)
 
     def __unicode__(self):
-        return '{}'.format(self.user)
+        return '{}'.format(self.last_name, self.first_name, self.email)
