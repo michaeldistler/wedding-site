@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 from rsvp.forms import RsvpForm
 from rsvp.models import Rsvp
@@ -17,10 +17,9 @@ def rsvp_form(request):
                 number_of_guests=rsvp_form.cleaned_data['number_of_guests'],
             )
 
-            rsvp_form.save()
             return render(request, 'index.html', {})
         else:
-            return HttpResponse("rsvp was not sent.")
+            return JsonResponse({'error': 'Error, Will Robinson.'})
     else:
         user = request.user
         rsvp_form = RsvpForm()

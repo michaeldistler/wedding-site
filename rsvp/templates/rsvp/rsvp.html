@@ -1,7 +1,22 @@
 {% block content %}
-<form method="POST" action="/RSVP/">
+<div class="row">
+<form role="form" method="POST" action="/RSVP/">
     {% csrf_token %}
-    {{ rsvp_form }}
-    <input type="submit" value="RSVP" />
+    <div class="col-xs-12 col-lg-12">
+    <div class="form-group">
+    First Name: {{ rsvp_form.first_name }}
+    </div>
+    <div class="form-group">
+    Last Name: {{ rsvp_form.last_name }}
+    </div>
+    <div class="form-group">
+    Email: {{ rsvp_form.email }}
+    </div>
+    <div class="form-group">
+    Numero of guests: {{ rsvp_form.number_of_guests }}
+    </div>
+    <input class="btn btn-default" type="submit" value="RSVP" />
+    </div>
 </form>
+</div>
 {% endblock %}
