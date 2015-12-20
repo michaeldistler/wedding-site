@@ -33,7 +33,7 @@ class RsvpForm(forms.ModelForm):
             'number_of_guests': forms.NumberInput(attrs={
                 'name': 'number_of_guests',
                 'type': 'text',
-                'placeholder': 'Numero Of Guests',
+                'placeholder': 'Total Guests',
                 'class': 'form-control',
             }),
         }
