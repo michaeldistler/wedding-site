@@ -23,7 +23,7 @@ h1 {
 .navbar {
   font-family: 'Italianno';
   font-weight: 400;
-  font-size: 2.25em;
+  font-size: 2em;
   min-height: 75px;
   padding-top: 14px;
 }
@@ -139,13 +139,24 @@ h1 {
 .ceremony-section {
     width: 100%;
     padding: 50px 0;
-    color: #5bc0de;
-    background: url(../img/petcat-crop-xs.jpg) no-repeat center bottom fixed;
+    color: #fff;
+    background: url(../img/petcat-crop-xs-darker.jpg) no-repeat center bottom fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.added-spacing {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ceremony-deets {
+  font-family: 'Italianno',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-size: 2.5em;
 }
 
 .gift-section {
@@ -203,7 +214,7 @@ h1 {
         width: 100%;
         padding: 50px 0;
         color: #fff;
-        background: url(../img/petcat-dark.jpg) no-repeat left center fixed;
+        background: url(../img/petcat-darker.jpg) no-repeat left center fixed;
         background-color: #FFF;
         -webkit-background-size: cover;
         -moz-background-size: cover;
