@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.core.mail import send_mail, BadHeaderError
+from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 
 from rsvp.forms import RsvpForm
 from rsvp.models import Rsvp
@@ -28,3 +29,18 @@ def rsvp_form(request):
         "rsvp_form": rsvp_form,
         "user": user,
     })
+
+
+def send_email(request, to_email):
+    subject = ''
+    message = ''
+    from_email = 'agorriewedding@gmail.com'
+    to_email = to_email
+    if subject and message and from_email:
+        try:
+            send_mail(subject, message, from_email, [to_email])
+        except BadHeaderError:
+            return HttpResponse('Invalid header found.')
+        return HttpResponseRedirect('/RSVP/')
+    else:
+        return HttpResponse('Make sure all fields are valid.')

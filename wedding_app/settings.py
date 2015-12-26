@@ -102,6 +102,5 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'michael.distler@gmail.com'
-EMAIL_HOST_PASSWORD = 'dbmvheeynmbpdcfa'
-
+EMAIL_HOST_USER = 'agorriewedding@gmail.com'
+EMAIL_HOST_PASSWORD = 'utters01.'
