@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^robots.txt$', lambda r: HttpResponse("User-agent: *\nDisallow: /", content_type="text/plain")),
 )
 
-urlpatterns += patterns('',
-    url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-)
+if not settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
