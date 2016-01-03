@@ -1,30 +1,16 @@
-"""
-Django settings for wedding_app project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8d0y!vduskhzz=xfsvp7_3%m-6y&i3dju($p62o)64b*!8evh6'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -103,4 +89,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'agorriewedding@gmail.com'
-EMAIL_HOST_PASSWORD = 'utters01.'
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+
+try:
+    from local_settings import *
+except Exception as e:
+    pass

@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
+from django.conf import settings
 
 from rsvp.forms import RsvpForm
 from rsvp.models import Rsvp
 
 
-# Needs work
 def rsvp_form(request):
     if request.method == "POST":
         rsvp_form = RsvpForm(request.POST)
@@ -17,7 +17,9 @@ def rsvp_form(request):
                 email=rsvp_form.cleaned_data['email'],
                 number_of_guests=rsvp_form.cleaned_data['number_of_guests'],
             )
-
+            send_email(
+                rsvp_form.cleaned_data['email'],
+            )
             return render(request, 'index.html', {})
         else:
             return JsonResponse({'error': 'Error, Will Robinson.'})
@@ -31,14 +33,16 @@ def rsvp_form(request):
     })
 
 
-def send_email(request, to_email):
-    subject = ''
-    message = ''
+def send_email(to_email):
+    subject = 'Thanks for the RSVP!'
+    message = 'Thanks for the RSVP'
     from_email = 'agorriewedding@gmail.com'
-    to_email = to_email
+    to_email = 'agorriewedding@gmail.com' if settings.DEBUG else to_email
     if subject and message and from_email:
         try:
             send_mail(subject, message, from_email, [to_email])
+            # For testing purposes only. TODO logfile
+            print "Email sent to: {}".format(to_email)
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
         return HttpResponseRedirect('/RSVP/')
