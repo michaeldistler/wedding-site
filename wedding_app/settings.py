@@ -14,6 +14,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = [
     'custom-wedding-application.herokuapp.com',
+    'agorriewedding.com'
 ]
 
 
