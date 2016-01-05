@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Sum
 from django.core.mail import send_mail, BadHeaderError
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.conf import settings
@@ -45,6 +46,15 @@ def send_email(to_email):
             print "Email sent to: {}".format(to_email)
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
-        return HttpResponseRedirect('/RSVP/')
+        return HttpResponseRedirect('/')
     else:
         return HttpResponse('Make sure all fields are valid.')
+
+
+def rsvp_list(request):
+    rsvps = Rsvp.objects.all()
+    rsvp_guest_count = Rsvp.objects.aggregate(Sum('number_of_guests'))
+
+    return render(request, 'rsvp/rsvp_list.html', {
+        "rsvp_list": rsvps,
+        "guests": rsvp_guest_count, })
