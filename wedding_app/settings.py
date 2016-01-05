@@ -12,7 +12,9 @@ DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = [
+    'custom-wedding-application.herokuapp.com',
+]
 
 
 # Application definition
