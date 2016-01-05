@@ -56,6 +56,6 @@ def rsvp_list(request):
     rsvps = Rsvp.objects.all()
     rsvp_guest_count = Rsvp.objects.aggregate(Sum('number_of_guests'))
 
-    return render(request, 'rsvp_list.html', {
+    return render(request, 'rsvp/rsvp_list.html', {
         "rsvp_list": rsvps,
         "guests": rsvp_guest_count, })
