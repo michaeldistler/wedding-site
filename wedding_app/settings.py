@@ -11,6 +11,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
+SITE_ID = 2
 
 ALLOWED_HOSTS = [
     'custom-wedding-application.herokuapp.com',
