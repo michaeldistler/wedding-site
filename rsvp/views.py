@@ -3,6 +3,7 @@ from django.db.models import Sum
 from django.core.mail import send_mail, BadHeaderError
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.conf import settings
+from django.template.loader import render_to_string
 
 from rsvp.forms import RsvpForm
 from rsvp.models import Rsvp
@@ -35,8 +36,8 @@ def rsvp_form(request):
 
 
 def send_email(to_email):
-    subject = 'Thanks for the RSVP!'
-    message = 'Thanks for the RSVP'
+    subject = 'Thanks for the RSVP! We will see you soon!'
+    message = render_to_string('email.txt')
     from_email = 'agorriewedding@gmail.com'
     to_email = 'agorriewedding@gmail.com' if settings.DEBUG else to_email
     if subject and message and from_email:
