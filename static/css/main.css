@@ -1,5 +1,5 @@
 body {
-  padding-top: 0px;
+  padding-top: 75px;
   font-family: 'Quattrocento', serif;
   font-size: 18px;
 }
@@ -10,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Italianno',"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 400;
 }
 h1 {
@@ -19,16 +19,16 @@ h1 {
 }
 
 .navbar {
-  font-family: 'Italianno';
+  font-family: 'Raleway';
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1em;
   min-height: 75px;
   padding-top: 14px;
 }
 
 .navbar-default {
   background-color: rgba(255,255,255,0.85);
-  border-color: #5bc0de;
+  border-color: #eb514f;
 }
 
 .navbar-fixed-top {
@@ -59,7 +59,7 @@ h1 {
 .intro {
     text-align: center;
     color: #fff;
-    background: url(../img/faceoff_shortened.jpg) no-repeat top center scroll;
+    background: url(../img/faceoff_extended.jpg) no-repeat top center fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -108,8 +108,9 @@ h1 {
 }
 
 .content-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(255,255,255,0.5);
 }
 
 .gift-section {
@@ -231,12 +232,16 @@ footer {
     .intro {
         width: 100%;
         padding: 0;
-        background: url(../img/faceoff_extended.jpg) no-repeat top center scroll;
+        background: url(../img/faceoff_extended.jpg) no-repeat top center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
     }
+    .content-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
 
     .text-right-responsive {
       text-align: right;
