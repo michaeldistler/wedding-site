@@ -14,8 +14,8 @@ h6 {
   font-weight: 400;
 }
 h1 {
-  font-size: 4em;
-  color: rgba(255,0,84,1);
+  font-size: 3em;
+  color: #eb514f;
 }
 
 .navbar {
@@ -59,7 +59,7 @@ h1 {
 .intro {
     text-align: center;
     color: #fff;
-    background: url(../img/faceoff_extended.jpg) no-repeat top center fixed;
+    background: url(../img/piggyback-3.jpg) no-repeat top center fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -82,11 +82,11 @@ h1 {
 }
 
 .party-img-him {
-  border: 7px solid #5bc0de;
+  border: 7px solid #287BBF;
 }
 
 .party-img-her {
-  border: 7px solid rgba(255,0,84,1);
+  border: 7px solid #eb514f;
 }
 
 .text-right-responsive {
@@ -98,12 +98,12 @@ h1 {
 }
 
 .lead-him {
-  color: #5bc0de;
+  color: #287BBF;
   font-size: 16px;
 }
 
 .lead-her {
-  color: rgba(255,0,84,1);
+  color: #eb514f;
   font-size: 16px;
 }
 
@@ -115,7 +115,7 @@ h1 {
 
 .gift-section {
   width: 100%;
-  background-color: #5bc0de;
+  background-color: #287BBF;
 }
 
 .about-section {
@@ -123,7 +123,7 @@ h1 {
     height: 100vh;
     padding: 50px 0;*/
     color: #fff;
-    background: url(../img/stonewall-crop-xs.jpg) no-repeat center top fixed;
+    background: url(../img/crazy-dark.jpg) no-repeat center top fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -139,7 +139,7 @@ h1 {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/petcat-crop-xs-darker.jpg) no-repeat center bottom fixed;
+    background: url(../img/sitting-dark.jpg) no-repeat center bottom fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -162,7 +162,7 @@ h1 {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/porch-dark-xs-blur.jpg) no-repeat center center fixed;
+    background: url(../img/gotwood.jpg) no-repeat center center fixed;
     background-color: #FFF;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -175,10 +175,13 @@ footer {
 }
 
 @media(min-width:767px) {
+    h1 {
+      font-size: 4em;
+    }
     .intro {
         width: 100%;
         padding: 0;
-        background: url(../img/faceoff.jpg) no-repeat top center scroll;
+        background: url(../img/piggyback-3.jpg) no-repeat top center scroll;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
@@ -197,7 +200,7 @@ footer {
       /*  width: 100%;
         padding: 50px 0;*/
         color: #fff;
-        background: url(../img/stonewall-dark.jpg) no-repeat left top fixed;
+        background: url(../img/crazy-dark2.jpg) no-repeat left top fixed;
         background-color: #FFF;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -217,7 +220,7 @@ footer {
         width: 100%;
         padding: 50px 0;
         color: #fff;
-        background: url(../img/petcat-darker.jpg) no-repeat left center fixed;
+        background: url(../img/sitting-dark.jpg) no-repeat left center fixed;
         background-color: #FFF;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -225,14 +228,14 @@ footer {
         -o-background-size: cover;
     }
     .gift-section {
-        background: url(../img/porch-dark-blur.jpg) no-repeat right center fixed;
+        background: url(../img/gotwood.jpg) no-repeat right center fixed;
 }
 
 @media(min-width:1200px) {
     .intro {
         width: 100%;
         padding: 0;
-        background: url(../img/faceoff_extended.jpg) no-repeat top center fixed;
+        background: url(../img/piggyback-3.jpg) no-repeat top center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
