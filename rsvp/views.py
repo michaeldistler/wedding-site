@@ -4,6 +4,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.conf import settings
 from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 
 from rsvp.forms import RsvpForm
 from rsvp.models import Rsvp
