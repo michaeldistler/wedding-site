@@ -39,8 +39,8 @@ def rsvp_form(request):
 def send_email(to_email):
     subject = 'Thanks for the RSVP! We will see you soon!'
     message = render_to_string('email.txt')
-    from_email = 'agorriewedding@gmail.com'
-    to_email = 'agorriewedding@gmail.com' if settings.DEBUG else to_email
+    from_email = 'jeffandlizwedding16@gmail.com'
+    to_email = 'jeffandlizwedding16@gmail.com' if settings.DEBUG else to_email
     if subject and message and from_email:
         try:
             send_mail(subject, message, from_email, [to_email])
